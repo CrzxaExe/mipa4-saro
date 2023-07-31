@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <!--<script src="./js/chat.js"></script>-->
+  <script src="./js/index.js"></script>
+  <title>Mipa 4 SMANSARO:Chat</title>
+</head>
+<body>
+	<header>
+	  <div class="panorama">
+	    <img src="./img/pano.png" id="pano">
+	    <img src="./img/pano_1.png" id="pano1">
+	    <img src="./img/pano_2.png" id="pano2">
+	    <img src="./img/pano_3.png" id="pano3">
+	    <img src="./img/pano_4.png" id="pano4">
+	    <img src="./img/pano_5.png" id="pano5">
+	    <img src="./img/pano_6.png" id="pano6">
+	    <b id="sman">XII Mipa 4</b>
+	  </div>
+	  <div class="navbar">
+	    <ul class="content">
+	      <li class="navi">
+	        <a href="./index.html">Home</a>
+	      </li>
+	      <li class="navi">
+	        <a href="./chat.html">Chat</a>
+	      </li>
+	      <li class="navi">
+	        <a href="./member.html">Member</a>
+	      </li>
+	      <li class="navi">
+	        <a href="./galery.html">Galeri</a>
+	      </li>
+	      <li class="navi">
+	        <a href="./about.html">Tentang</a>
+	      </li>
+	    </ul>
+	  </div>
+	 </header>
+	 
+	 <div class="container">
+	   <b id="judul">Chat With ZxraClient</b>
+	   <div class="chat" id="chat"></div>
+	 </div>
+	 <div class="action">
+	   <input type="text" placeholder="Username" id="user">
+	   <input type="text" placeholder="Tulis teks" id="pesan">
+	   <button id="send">Send</button>
+	 </div>
+	 
+	 <script type="module">
+	   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+	   import { getFirestore, collection, arrayUnion, getDoc, addDoc, setDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"
+	   
+	   const firebaseConfig = {
+       apiKey: "AIzaSyBGbcSHyMDjEBPpZ6jh9So-X7I7DiKVgPU",
+       authDomain: "zxrachat.firebaseapp.com",
+       databaseURL: "https://zxrachat-default-rtdb.asia-southeast1.firebasedatabase.app",
+       projectId: "zxrachat",
+       storageBucket: "zxrachat.appspot.com",
+       messagingSenderId: "504117790392",
+       appId: "1:504117790392:web:7aa9bb22a2cd0bda37164d",
+       measurementId: "G-VQQ9BG6L13"
+      };
+      const app = initializeApp(firebaseConfig)
+      var db = getFirestore(app)
+      
+      const data = collection(db, "chat")
+      const chat = document.getElementById("chat")
+      
+      document.querySelector("#send").addEventListener("click", ()=>{
+        sendMessage()
+      })
+      
+      let Dates = {
+        "month": ["Januari", "Februari", "Maret", "April", "Mei", "Juni","Juli", "Agustus", "September", "November", "Desember"],
+        "date": ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat","Sabtu"]
+      }
+      
+      window.addEventListener("load", () => {
+        setInterval(async() => {
+          let datas = await getAllMessage()
+          chat.innerHTML = ""
+          for(let msg of datas.message) {
+            let pesanDate = new Date(msg.date)
+            chat.innerHTML += `<div class='pesan'><a>@${msg.name}</a><p>${msg.message}</p><b>${Dates.date[pesanDate.getDay()]}, ${msg.time.split(".")[0]}.${msg.time.split(".")[1]}</b></div>`
+          }
+        }, 10)
+      })
+      
+      async function sendMessage() {
+        let pesan = document.querySelector("#pesan");
+        let usernames = document.querySelector("#user").value;
+        if(pesan.value == "") return alert("No text")
+        if(!usernames) usernames = "Anonymous"
+        await updateDoc(doc(data, "zxraMipat"), {
+          "message": arrayUnion(
+            {
+             "name": usernames,
+             "date": new Date().toLocaleDateString("en-US"),
+             "time": new Date().toLocaleTimeString(),
+             "message": pesan.value
+            })
+        })
+        document.getElementById("pesan").value = ""
+      }
+      function handleKeyDown(event) {
+        console.log(event)
+        if (event.key === "Enter") {
+         event.preventDefault(); // Mencegah "Enter" mengirimkan form (jika ada form)
+        const input = event.target;
+        const value = input.value;
+        const selectionStart = input.selectionStart;
+
+        input.value = value.substring(0, selectionStart) + "\n" + value.substring(input.selectionEnd);
+         input.setSelectionRange(selectionStart + 1, selectionStart + 1);
+        }
+      }
+      async function getAllMessage() {
+        let all = await getDoc(doc(data, "zxraMipat"))
+       // console.log(all.data())
+        return all.data()
+      }
+	 </script>
+</body>
+</html>
