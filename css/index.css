@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+body {
+  position: relative;
+  background: #980F00;
+  max-width: 100%;
+  overflow-x: hidden;
+  user-select: none;
+  height: auto;
+}
+@media screen {
+  body {
+    max-width: 100vw;
+    overflow-x: none;
+  }
+}
+header {
+  position: relative;
+  height: auto;
+  top: -1.5vw;
+}
+header .panorama {
+  position: relative;
+  left: -1.5vw;
+}
+header .panorama img {
+  object-fit: contain;
+  position: absolute;
+  width: 103%;
+}
+header .panorama #pano6 {
+  top: 9vw;
+}
+header .panorama #sman {
+  position: absolute;
+  text-decoration: underline;
+  width: 103%;
+  transition: .2s transform ease;
+  text-align: center;
+  text-shadow: 1vw .5vw 0 #000000;
+  top: 12vw;
+  color: white;
+  font-size: 7vw;
+  font-family: 'Prompt', sans-serif;
+}
+header .navbar {
+  position: relative;
+  width: auto;
+  top: 49vw;
+}
+header .navbar .content {
+  position: absolute;
+  left: 4.7%;
+  right: 12%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  list-style: none;
+}
+header .navbar .content li {
+  width: auto;
+  background: rgba(42,42,42,0);
+  font-size: 4vw;
+  height: auto;
+  border-radius: 1vw;
+  margin: 0 .8vw;
+  border: .3vw rgb(42,42,42) solid;
+  transition: 1s background ease, 1s border ease;
+  padding: 1vw 2vw;
+}
+header .navbar .content li:hover {
+  background: rgba(42,42,42,1);
+  border: .3vw #ba1200 solid;
+}
+header .navbar .content li a {
+  font-weight: bold;
+  color: rgb(90,9,0);
+  transition: 1s color ease;
+  font-family: 'Promt', Sans-Serif;
+  text-decoration: none;
+}
+header .navbar .content li:hover a {
+  color: #980F00;
+}
+.container {
+  background: rgba(0,0,0,.1);
+  font-family: 'Prompt', sans-serif;
+  z-index: 9;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  padding: 2vw 3vw;
+  border-radius: 2vw;
+  top: 60vw;
+  width: 74vw;
+  font-size: 3.5vw;
+  height: auto;
+}
+.container #judul {
+  font-size: 4vw;
+  opacity: 1;
+  font-family: 'Prompt', sans-serif;
+  color: white;
+  padding: 1.5vw;
+}
+.container p {
+  white-space: pre-line;
+}
+.container #info {
+  padding: 2vw 3vw;
+  font-size: 3vw;
+  line-height: 3.9vw;
+  background: rgba(0,0,0,.1);
+  text-align: left;
+}
+.container .galeryList {
+  width: 68vw;
+  height: auto;
+  justify-content: center;
+  border-radius: 2vw;
+  padding: 4vw 3vw;
+  background: rgba(0,0,0,.2);
+}
+.post {
+  width: 62vw;
+  border-radius: .5vw;
+  background: rgba(0,0,0,.2);
+  text-align: left;
+  justify-content: center;
+  height: auto;
+  padding: 2vw 3vw;
+}
+.post b {
+  color: white;
+  font-size: 3vw;
+}
+.post img {
+  object-fit: content;
+  width: 61vw;
+  margin: 0 auto;
+}
+#member {
+  padding: 1vw 0;
+  transform: translate(5%);
+}
+#member .siswa {
+  width: 60vw;
+  height: 5vw;
+  text-align: left;
+  background: rgba(0,0,0,.2);
+  font-size: .8em;
+  transition: all .8s ease;
+  margin: .5vw 0;
+  padding: .8vw 2vw;
+  border-radius: 1vw;
+}
+#member .siswa:hover {
+  height: 18vw;
+  overflow: scroll;
+  transform: translate(3vw, 0);
+}
+.siswa p {
+  position: relative;
+  opacity: 0;
+  line-height: 0vw;
+  top: -5vw;
+  transition: all .5s ease;
+}
+.siswa:hover p {
+  top: 0vw;
+  line-height: 3.7vw;
+  opacity: 1;
+}
+.action {
+  display: block;
+  position: fixed;
+  bottom: 2vw;
+  z-index: 9;
+  margin: 0 auto;
+  justify-content: center;
+}
+.action #send {
+  width: 11vw;
+  border: .3vw solid black;
+  padding: 0 2vw;
+  border-radius: 1vw;
+  color: white;
+  transition: all 1.4s ease;
+  background: rgba(0,0,0,.2);
+  height: 6.2vw;
+}
+.action #send:hover {
+  background: rgba(0,0,0,.8);
+}
+.action #send:focus {
+  background: rgba(0,0,0,0);
+}
+.action #pesan {
+  width: 80vw;
+  border-radius: 1vw;
+  min-height: 6vw;
+  padding: 0 2vw;
+  word-break: break-all;
+  border: .3vw solid black;
+  overflow: hidden;
+  background: rgba(199,199,199, .2);
+  transition: all 1.4s ease;
+  height: auto;
+  white-space: pre-line;
+  max-height: 20vw;
+}
+.action #pesan::placeholder {
+  color: rgb(247,155,155);
+  font-size: 3vw;
+  transition: all 1.4s ease;
+}
+.action #pesan:focus::placeholder {
+  color: black;
+}
+.action #pesan:focus {
+  background: rgba(199,199,199, 1);
+}
+.action #user {
+  width: 40vw;
+  transition: all 1.4s ease;
+  border: .3vw solid black;
+  margin: .4vw 0;
+  background: rgba(199,199,199, .2);
+  border-radius: 1vw;
+  padding: 0 2vw;
+  height: 4vw;
+}
+.action #user:focus {
+  background: rgba(199,199,199, 1);
+}
+.action #user::placeholder {
+  color: rgb(247,155,155);
+  font-size: 2.6vw;
+  transition: all 1.4s ease;
+}
+.action #user:focus::placeholder {
+  color: black;
+}
+.chat {
+  background: #430700;
+  width: 73vw;
+  border-radius: 1vw;
+  z-index: 1;
+  padding: 1vw 1vw;
+  height: 80vw;
+  overflow: scroll;
+  justify-content: center;
+  align-content: center;
+}
+.pesan {
+  width: 65vw;
+  border-radius: 2vw;
+  padding: .3vw 1vw;
+  z-index: 1;
+  text-align: left;
+  margin: .5vw auto;
+  color: black;
+  background: #ffbbb3;
+}
+.pesan a {
+  padding: 0vw;
+  margin: 0vw;
+  font-size: 3vw;
+  line-height: .5vw;
+}
+.pesan p {
+  padding: 1vw;
+  margin: 0vw;
+  background: rgba(0,0,0,.1);
+  font-size: 3vw;
+  border-radius: 1vw;
+  word-break: break-all;
+  line-height: 2.9vw;
+}
+.pesan b {
+  text-align: right;
+  color: white;
+  font-size: 2.2vw;
+}
