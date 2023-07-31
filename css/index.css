@@ -61,6 +61,7 @@ header .navbar .content li {
   width: auto;
   background: rgba(42,42,42,0);
   font-size: 4vw;
+  font-weight: bold;
   height: auto;
   border-radius: 1vw;
   margin: 0 .8vw;
@@ -94,7 +95,7 @@ header .navbar .content li:hover a {
   border-radius: 2vw;
   top: 60vw;
   width: 74vw;
-  font-size: 3.5vw;
+  font-size: 3.3vw;
   height: auto;
 }
 .container #judul {
@@ -106,6 +107,7 @@ header .navbar .content li:hover a {
 }
 .container p {
   white-space: pre-line;
+  line-height: 3.1vw;
 }
 .container #info {
   padding: 2vw 3vw;
@@ -140,6 +142,12 @@ header .navbar .content li:hover a {
   width: 61vw;
   margin: 0 auto;
 }
+#kelas {
+  width: 86%;
+  border-radius: 2vw;
+  border: .8vw solid black;
+  object-fit: contain;
+}
 #member {
   padding: 1vw 0;
   transform: translate(5%);
@@ -156,7 +164,7 @@ header .navbar .content li:hover a {
   border-radius: 1vw;
 }
 #member .siswa:hover {
-  height: 18vw;
+  height: 12vw;
   overflow: scroll;
   transform: translate(3vw, 0);
 }
@@ -247,8 +255,10 @@ header .navbar .content li:hover a {
   width: 73vw;
   border-radius: 1vw;
   z-index: 1;
+  height: auto;
+  max-height: 120vw;
+  transition: all .5s ease;
   padding: 1vw 1vw;
-  height: 80vw;
   overflow: scroll;
   justify-content: center;
   align-content: center;
@@ -273,13 +283,14 @@ header .navbar .content li:hover a {
   padding: 1vw;
   margin: 0vw;
   background: rgba(0,0,0,.1);
-  font-size: 3vw;
+  font-size: 2.5vw;
   border-radius: 1vw;
   word-break: break-all;
-  line-height: 2.9vw;
+  letter-spacing: -.08vw;
+  line-height: 2.4vw;
 }
 .pesan b {
   text-align: right;
   color: white;
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
