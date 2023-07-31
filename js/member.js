@@ -10,7 +10,8 @@ const list = [
     "name": "Ahmad Fauzi"
   },
   {
-    "name": "Anisa Sufi Yulianti"
+    "name": "Anisa Sufi Yulianti",
+    "peran": "Koordinator Mapel PJOK"
   },
   {
     "name": "Arifatul Amri"
@@ -38,16 +39,19 @@ const list = [
     "name": "Dhea Rintan Az Zahra Aprias"
   },
   {
-    "name": "Dito Yus Dermawan"
+    "name": "Dito Yus Dermawan",
+    "peran": "Koordinator Mapel Seni"
   },
   {
-    "name": "Erfi Nafasa Fadhilah Putri"
+    "name": "Erfi Nafasa Fadhilah Putri",
+    "peran": "Koordinator Mapel Fisika"
   },
   {
     "name": "Fawwaz Izzan Tsaqif"
   },
   {
-    "name": "Feni Prihartini"
+    "name": "Feni Prihartini",
+    "peran": "Koordinator Mapel Bahasa Indonesia"
   },
   {
     "name": "Inayah Arsyika Basyari"
@@ -72,7 +76,8 @@ const list = [
     "name": "Maulin Aprilia"
   },
   {
-    "name": "Muhammad Bustanul Arifin"
+    "name": "Muhammad Bustanul Arifin",
+    "peran": "Koordinator Mapel Bio"
   },
   {
     "name": "Nia Rachmawati",
@@ -85,7 +90,8 @@ const list = [
     "name": "Probo Dwi Yulastono"
   },
   {
-    "name": "Rakhelya Dewi Prasanti"
+    "name": "Rakhelya Dewi Prasanti",
+    "peran": "Koordinator Mapel Kimia"
   },
   {
     "name": "Ridlo Yusuf Abdilah"
@@ -116,7 +122,7 @@ const member = document.getElementById("member")
 let countMem = 1;
 for(let siswa of list) {
   if(!siswa.peran) siswa.peran = "Anggota"
-  member.innerHTML += `<div class='siswa'>${countMem}. <b>${siswa.name}</b><p>${siswa.peran}<br>Motto:</p></div>`
+  member.innerHTML += `<div class='siswa'>${countMem}. <b>${siswa.name}</b><p>${siswa.peran}</p></div>`
   countMem++
 }
 
