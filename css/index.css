@@ -94,7 +94,7 @@ header .navbar .content li:hover a {
   padding: 2vw 3vw;
   border-radius: 2vw;
   top: 60vw;
-  width: 74vw;
+  width: 86vw;
   font-size: 3.3vw;
   height: auto;
 }
@@ -117,7 +117,9 @@ header .navbar .content li:hover a {
   text-align: left;
 }
 .container .galeryList {
-  width: 68vw;
+  position: relative;
+  margin: 0 auto;
+  width: 76vw;
   height: auto;
   justify-content: center;
   border-radius: 2vw;
@@ -125,7 +127,7 @@ header .navbar .content li:hover a {
   background: rgba(0,0,0,.2);
 }
 .post {
-  width: 62vw;
+  width: 70vw;
   border-radius: .5vw;
   background: rgba(0,0,0,.2);
   text-align: left;
@@ -139,7 +141,8 @@ header .navbar .content li:hover a {
 }
 .post img {
   object-fit: content;
-  width: 61vw;
+  position: relative;
+  width: 66vw;
   margin: 0 auto;
 }
 #kelas {
@@ -149,11 +152,13 @@ header .navbar .content li:hover a {
   object-fit: contain;
 }
 #member {
+  position: relative;
+  margin: 0 auto;
   padding: 1vw 0;
   transform: translate(5%);
 }
 #member .siswa {
-  width: 60vw;
+  width: 70vw;
   height: 5vw;
   text-align: left;
   background: rgba(0,0,0,.2);
@@ -164,7 +169,7 @@ header .navbar .content li:hover a {
   border-radius: 1vw;
 }
 #member .siswa:hover {
-  height: 12vw;
+  height: 14vw;
   overflow: scroll;
   transform: translate(3vw, 0);
 }
@@ -252,11 +257,12 @@ header .navbar .content li:hover a {
 }
 .chat {
   background: #430700;
-  width: 73vw;
+  width: 79vw;
   border-radius: 1vw;
   z-index: 1;
+  margin: 0 auto;
   height: auto;
-  max-height: 120vw;
+  max-height: 113vw;
   transition: all .5s ease;
   padding: 1vw 1vw;
   overflow: scroll;
@@ -264,9 +270,9 @@ header .navbar .content li:hover a {
   align-content: center;
 }
 .pesan {
-  width: 65vw;
+  width: 77vw;
   border-radius: 2vw;
-  padding: .3vw 1vw;
+  padding: .2vw .8vw;
   z-index: 1;
   text-align: left;
   margin: .5vw auto;
@@ -276,21 +282,21 @@ header .navbar .content li:hover a {
 .pesan a {
   padding: 0vw;
   margin: 0vw;
-  font-size: 3vw;
+  font-size: .9em;
   line-height: .5vw;
 }
 .pesan p {
-  padding: 1vw;
+  padding: 1.5vw;
   margin: 0vw;
   background: rgba(0,0,0,.1);
-  font-size: 2.5vw;
+  font-size: .8em;
   border-radius: 1vw;
   word-break: break-all;
   letter-spacing: -.08vw;
-  line-height: 2.4vw;
+  line-height: .9em;
 }
 .pesan b {
   text-align: right;
   color: white;
-  font-size: 2vw;
+  font-size: .75em;
 }
