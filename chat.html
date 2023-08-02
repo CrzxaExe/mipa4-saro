@@ -44,6 +44,7 @@
 	 
 	 <div class="container">
 	   <b id="judul">Chat With ZxraClient</b>
+	   <p>Sekarang anda bisa mengirim pesan lewat Discord bot juga</p>
 	   <div class="chat" id="chat"></div>
 	 </div>
 	 <div class="action">
@@ -87,9 +88,9 @@
           chat.innerHTML = ""
           for(let msg of datas.message) {
             let pesanDate = new Date(msg.date)
-            chat.innerHTML += `<div class='pesan'><a>@${msg.name}</a><p>${msg.message}</p><b>${Dates.date[pesanDate.getDay()]}, ${msg.time.split(".")[0]}.${msg.time.split(".")[1]}</b></div>`
+            chat.innerHTML += `<div class='pesan'><a>@${msg.name}</a><p>${msg.message}</p><b>${Dates.date[pesanDate.getDay()]}, ${msg.time}</b></div>`
           }
-        }, 10)
+        }, 5000)
       })
       
       async function sendMessage() {
