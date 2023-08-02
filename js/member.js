@@ -5,10 +5,12 @@ const list = [
     "piket": "Kamis"
   },
   {
-    "name": "Afifah Retnoningsih"
+    "name": "Afifah Retnoningsih",
+    "piket": "Selasa"
   },
   {
-    "name": "Ahmad Fauzi"
+    "name": "Ahmad Fauzi",
+    "piket": "Rabu"
   },
   {
     "name": "Anisa Sufi Yulianti",
@@ -16,13 +18,16 @@ const list = [
     "piket": "Jumat"
   },
   {
-    "name": "Arifatul Amri"
+    "name": "Arifatul Amri",
+    "piket": "Rabu"
   },
   {
-    "name": "Awitinanti Mauly Wiritanaya"
+    "name": "Awitinanti Mauly Wiritanaya",
+    "piket": "Selasa"
   },
   {
-    "name": "Bagas Tri Ramadhani"
+    "name": "Bagas Tri Ramadhani",
+    "piket": "Senin"
   },
   {
     "name": "Bintang Nugraha Putra",
@@ -30,17 +35,20 @@ const list = [
     "piket": "Kamis"
   },
   {
-    "name": "Desita Aliyah Fatiah"
+    "name": "Desita Aliyah Fatiah",
+    "piket": "Rabu"
   },
   {
-    "name": "Destriyan Putra Prabowo"
+    "name": "Destriyan Putra Prabowo",
+    "piket": "Senin"
   },
   {
     "name": "Devika Ayu Nirmala",
     "piket": "Jumat"
   },
   {
-    "name": "Dhea Rintan Az Zahra Aprias"
+    "name": "Dhea Rintan Az Zahra Aprias",
+    "piket": "Senin"
   },
   {
     "name": "Dito Yus Dermawan",
@@ -53,7 +61,8 @@ const list = [
     "piket": "Kamis"
   },
   {
-    "name": "Fawwaz Izzan Tsaqif"
+    "name": "Fawwaz Izzan Tsaqif",
+    "piket": "Selasa"
   },
   {
     "name": "Feni Prihartini",
@@ -61,13 +70,16 @@ const list = [
     "piket": "Jumat"
   },
   {
-    "name": "Inayah Arsyika Basyari"
+    "name": "Inayah Arsyika Basyari",
+    "piket": "Senin"
   },
   {
-    "name": "Juwita Rohmawati"
+    "name": "Juwita Rohmawati",
+    "piket": "Selasa"
   },
   {
-    "name": "Kartika Aulia Hidayah"
+    "name": "Kartika Aulia Hidayah",
+    "piket": "Senin"
   },
   {
     "name": "Katika Vasanti",
@@ -79,7 +91,8 @@ const list = [
   },
   {
     "name": "M. Aryo Pramudya",
-    "peran": "Ketua Kelas"
+    "peran": "Ketua Kelas",
+    "piket": "Rabu"
   },
   {
     "name": "Maulin Aprilia",
@@ -87,14 +100,17 @@ const list = [
   },
   {
     "name": "Muhammad Bustanul Arifin",
-    "peran": "Koordinator Mapel Bio"
+    "peran": "Koordinator Mapel Bio",
+    "piket": "Selasa"
   },
   {
     "name": "Nia Rachmawati",
-    "peran": "Wakil Ketua"
+    "peran": "Wakil Ketua",
+    "piket": "Selasa"
   },
   {
-    "name": "Nuny Rahmadini"
+    "name": "Nuny Rahmadini",
+    "piket": "Senin"
   },
   {
     "name": "Probo Dwi Yulastono",
@@ -102,27 +118,32 @@ const list = [
   },
   {
     "name": "Rakhelya Dewi Prasanti",
-    "peran": "Koordinator Mapel Kimia"
+    "peran": "Koordinator Mapel Kimia",
+    "piket": "Rabu"
   },
   {
     "name": "Ridlo Yusuf Abdilah",
     "piket": "Jumat"
   },
   {
-    "name": "Rifa Aulanisa"
+    "name": "Rifa Aulanisa",
+    "piket": "Rabu"
   },
   {
-    "name": "Salwa Amelia Putri"
+    "name": "Salwa Amelia Putri",
+    "piket": "Rabu"
   },
   {
-    "name": "Septianingrum Gautami"
+    "name": "Septianingrum Gautami",
+    "piket": "Selasa"
   },
   {
     "name": "Syahla Istiqomah",
     "piket": "Jumat"
   },
   {
-    "name": "Tsamrotul Khoeriyah"
+    "name": "Tsamrotul Khoeriyah",
+    "piket": "Senin"
   },
   {
     "name": "Zahra Khoirotul Aniah",
